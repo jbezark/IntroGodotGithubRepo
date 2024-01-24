@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://coxdx25ir1fch"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ynk6"]
+albedo_color = Color(0, 0.278431, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_868xh"]
+albedo_color = Color(0.352941, 0.243137, 0.196078, 1)
+
+[node name="Tree" type="Node3D"]
+
+[node name="Leaves" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.91129, 0)
+radius = 2.928
+height = 3.4679
+sides = 64
+cone = true
+material = SubResource("StandardMaterial3D_7ynk6")
+
+[node name="Trunk" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95044, 0)
+size = Vector3(1, 4, 1)
+material = SubResource("StandardMaterial3D_868xh")
